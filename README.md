@@ -1,4 +1,2 @@
-# Google-Homepage
-I recreated the Google Homepage
+# Simple Js Fetch/Display data from api
 
-Checkout the [DEMO](https://learn-webdevyt.github.io/Google-Homepage/)
