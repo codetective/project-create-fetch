@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>jsfetch</title>
+  </head>
+
+  <body>
+    <div class="loader">
+      <div class="wrap">
+        <div class="loading">
+          <div class="bounceball"></div>
+          <div class="text">NOW LOADING</div>
+        </div>
+      </div>
+    </div>
+    <main class="container mb-4">
+      <div class="toastbox"></div>
+      <header>
+        <div class="container">
+          <div class="logo mb-2 pt-3">
+            <a href="#">Fetch</a>
+          </div>
+
+          <div id="search">
+            <form class="d-flex" autocomplete="off">
+              <input id="sbi" type="text" placeholder="Enter a search term" />
+              <div class="s-bt">
+                <div class="s-bt-wrap">
+                  <button type="submit" class="btn btn-primary btn-small">
+                    <svg
+                      class="bi bi-search"
+                      width="1em"
+                      height="1em"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M12.442 12.442a1 1 0 011.415 0l3.85 3.85a1 1 0 01-1.414 1.415l-3.85-3.85a1 1 0 010-1.415z"
+                        clip-rule="evenodd"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        d="M8.5 14a5.5 5.5 0 100-11 5.5 5.5 0 000 11zM15 8.5a6.5 6.5 0 11-13 0 6.5 6.5 0 0113 0z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="search-notify"></div>
+      </header>
+
+      <section class="container my-3">
+        <ul id="results-container" class="container"></ul>
+        <ul id="gr-container" class="container"></ul>
+      </section>
+    </main>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./jQuery.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script>
+      const inputbx = document.querySelector("#search input");
+      const searchbx = document.querySelector("#search");
+      inputbx.addEventListener("focus", () => searchbx.classList.add("ihov"));
+      inputbx.addEventListener("blur", () => searchbx.classList.remove("ihov"));
+    </script>
+  </body>
+</html>
